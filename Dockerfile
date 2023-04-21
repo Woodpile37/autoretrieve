@@ -24,7 +24,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=cache,target=/app/extern \
     make
 
-FROM ubuntu:22.04
+FROM ubuntu:kinetic
 RUN --mount=type=cache,target=/var/cache/apt \
     apt-get update && \
     apt-get install -y --no-install-recommends jq libhwloc-dev ocl-icd-opencl-dev ca-certificates
